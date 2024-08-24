@@ -35,7 +35,7 @@ class Constants {
         
         borderRadius: BorderRadius.circular(radius ?? 12)
       ),
-      child: child ?? SizedBox(width: 12, height: 12,),
+      child: child ?? const SizedBox(width: 12, height: 12,),
     );
   }
 }

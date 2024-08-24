@@ -36,13 +36,12 @@ class _UpcomingState extends State<Upcoming> {
     return LayoutBuilder(
       builder: (context, constraints) {
         final parentWidth = constraints.maxWidth;
-        final parentHeight = constraints.maxHeight;
         return Padding(
           padding: const EdgeInsets.all(16.0),
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
-            physics: BouncingScrollPhysics(),
-            child: Container(
+            physics: const BouncingScrollPhysics(),
+            child: SizedBox(
               width: parentWidth,
               child: Column(
               children: [
@@ -89,7 +88,6 @@ class UpcomingBox extends StatelessWidget {
     final double screenWidth = DeviceUtils.getScreenWidth(context);
     return LayoutBuilder(
       builder:(context, constraints) {
-        final double parentHeight = constraints.maxHeight;
         final double parentWidth = constraints.maxWidth;
         return Container(
         

@@ -37,13 +37,12 @@ class _CompletedState extends State<Completed> {
     return LayoutBuilder(
       builder: (context, constraints) {
         final parentWidth = constraints.maxWidth;
-        final parentHeight = constraints.maxHeight;
         return Padding(
           padding: const EdgeInsets.all(16.0),
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
-            physics: BouncingScrollPhysics(),
-            child: Container(
+            physics: const BouncingScrollPhysics(),
+            child: SizedBox(
               width: parentWidth,
               child: Column(
               children: [
@@ -90,7 +89,6 @@ class CompletedBox extends StatelessWidget {
     final double screenWidth = DeviceUtils.getScreenWidth(context);
     return LayoutBuilder(
       builder:(context, constraints) {
-        final double parentHeight = constraints.maxHeight;
         final double parentWidth = constraints.maxWidth;
         return Container(
         
@@ -154,7 +152,7 @@ class CompletedBox extends StatelessWidget {
               ],
             ),
             Divider(height: 1, color: BarberaColor.goldenRod,),
-            Container(
+            SizedBox(
               height: 48,
               child: Constants.wrapInPadding( left: 8, right: 12,
                 Row(

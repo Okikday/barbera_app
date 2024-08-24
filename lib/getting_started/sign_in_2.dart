@@ -23,6 +23,11 @@ class _SignIn2State extends State<SignIn2> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     double screenWidth = DeviceUtils.getScreenWidth(context);
     double screenHeight = DeviceUtils.getScreenHeight(context);
@@ -102,10 +107,12 @@ class _SignIn2State extends State<SignIn2> {
                       Future.delayed(const Duration(milliseconds: 1000), () {
                         Navigator.push(
                             // ignore: use_build_context_synchronously
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const MainScreen()));
+                            context, MaterialPageRoute(builder: (context) => const MainScreen()));
+                                setState(() {
+                                  isLoadingVisible = false;
+                                });
                       });
+                      
                     },
                     minWidth: screenWidth > 500 ? 350 : screenWidth * 0.9,
                     height: 48,
@@ -118,7 +125,7 @@ class _SignIn2State extends State<SignIn2> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Visibility(
-                            visible: widget.loadingVisible,
+                            visible: isLoadingVisible,
                             child: Transform.scale(
                                 scale: 2.5,
                                 child: LottieBuilder.asset(

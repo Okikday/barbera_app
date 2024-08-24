@@ -90,7 +90,7 @@ class BarbershopBox extends StatelessWidget {
         child: Constants.wrapInBox(
           radius: 18,
           innerPadding: 6,
-          color: Color.fromARGB(24, 247, 247, 247),
+          color: const Color.fromARGB(24, 247, 247, 247),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
           children: [

@@ -117,7 +117,7 @@ class _TextField1State extends State<CustomTextfield> {
           contentPadding: const EdgeInsets.all(16),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(12),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: Color(0xffdddddd),
               width: 1.5,
             ),

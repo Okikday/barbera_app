@@ -41,7 +41,7 @@ class _CancelledState extends State<Cancelled> {
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
             physics: const BouncingScrollPhysics(),
-            child: Container(
+            child: SizedBox(
               width: parentWidth,
               child: Column(
               children: [
@@ -86,7 +86,6 @@ class CancelledBox extends StatelessWidget {
     final double screenWidth = DeviceUtils.getScreenWidth(context);
     return LayoutBuilder(
       builder:(context, constraints) {
-        final double parentHeight = constraints.maxHeight;
         final double parentWidth = constraints.maxWidth;
         return Container(
         
@@ -114,7 +113,7 @@ class CancelledBox extends StatelessWidget {
                     height: 48,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                       image: AssetImage("assets/barbera/images/barbera_logo.png"),
                     )),
                   ),
@@ -149,7 +148,7 @@ class CancelledBox extends StatelessWidget {
               ],
             ),
             Divider(height: 1, color: BarberaColor.goldenRod,),
-            Container(
+            SizedBox(
               height: 48,
               child: Constants.wrapInPadding( left: 8, right: 12,
                 Row(

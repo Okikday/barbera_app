@@ -105,11 +105,11 @@ class SignInBottom extends StatelessWidget {
                     children: [
                       SocialButton1(
                           screenWidth: screenWidth * 0.4,
-                          image: "assets/images/google_logo.png",
+                          image: "assets/barbera/images/google_logo.png",
                           buttonText: "Google"),
                       SocialButton1(
                           screenWidth: screenWidth * 0.4,
-                          image: "assets/images/facebook_circle_logo1.png",
+                          image: "assets/barbera/images/facebook_circle_logo1.png",
                           buttonText: "Facebook")
                     ],
                   ),
